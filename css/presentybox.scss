@@ -1,0 +1,167 @@
+.masonry_gallery {
+    .masonry_sizer {
+        width: calc(33% - 10px);
+        @media (max-width: 767px) {
+            width: calc(50% - 10px);
+        }
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+    }
+    .masonry-item {
+        width: calc(33% - 10px);
+        margin-bottom: 10px;
+        position: relative;
+        display: block;
+        cursor: pointer;
+        @media (max-width: 767px) {
+            width: calc(50% - 10px);
+        }
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+        
+        .cta-hover {
+            z-index: 10;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            opacity: 0;
+            transition-delay: 150ms;
+            transition: all 250ms ease;
+            left: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                color: rgba(255, 255, 255, 0.85);
+                font-size: 2.5em;
+            }
+        }
+        
+
+        figcaption {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            padding: 20px;
+            opacity: 0;
+            transition: all 250ms ease;
+            &:before {
+                position: absolute;
+                content: ' ';
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                // background-color: rgba(0,0,0,0.25);
+                transition: all 250ms ease;
+            }
+            &.TopLeft {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                &:before { 
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+                    background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+                    /* FF3.6-15 */
+                    background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+                    /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+                    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
+                    /* IE6-9 fallback on horizontal gradient */
+                }
+            }
+            &.BottomLeft {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                &:before {
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+                    background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+                    /* FF3.6-15 */
+                    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+                    /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(45deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+                    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
+                    /* IE6-9 fallback on horizontal gradient */
+                }
+            }
+            &.TopRight {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                &:before {
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+                    background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+                    /* FF3.6-15 */
+                    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+                    /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+                    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+                    /* IE6-9 fallback on horizontal gradient */
+                }
+            }
+            &.BottomRight {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                &:before {
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+                    background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+                    /* FF3.6-15 */
+                    background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+                    /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+                    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+                    /* IE6-9 fallback on horizontal gradient */
+                }
+            }
+            .img-title {
+                color: #fff;
+                font-weight: bold;
+                position: relative;
+                z-index: 9;
+                .img-caption {
+                    margin-top: 3px;
+                    font-weight: normal;
+                    color: rgba(255,255,255,0.75);
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        &:hover {
+            .cta-hover {
+                opacity: 1;
+            }
+            figcaption {
+                opacity: 1;
+            }
+        }
+    
+    }
+}
+
+.pswp__caption__center {
+    .cta-hover {
+        display: none;
+    }
+    .img-title {
+        font-weight: bold;
+    }
+    .img-caption {
+        display: inline-block; 
+        margin-left: 5px;
+        font-weight: normal;
+    }
+}
